@@ -20,7 +20,7 @@ by netty and integrated with Springboot .
 
 ## Usage:
 
-1. Start Wo web application server  ./build/wo-server-0.0.1-SNAPSHOT.jar in command line as below:
+1. Start Wo web application server  *./build/wo-server-0.0.1-SNAPSHOT.jar* in command line as below:
 
    ```shell
    java -jar wo-server-0.0.1-SNAPSHOT.jar [--option]
@@ -42,3 +42,18 @@ by netty and integrated with Springboot .
    - @QueryMapping: mark down a method in @Request programs used as URI mapping working as Spring MVC @RequestMapping.
    - @QueryParam: a @QueryMapping method's parameter, used to bind web browser input value, similar to @RequestParam in Spring MVC.
    - @QueryVariable: annotate a URI variable in a @QueryMapping annotation, working as @RequestVariable in Spring MVC.  
+
+   ## Despendencies
+
+   Install all repositores in directory *./repository/* into your project repository, and add the following dependency in your project's pom:
+
+   ```xml
+   <dependency>
+       <groupId>org.jetbrains</groupId>
+       <artifactId>annotations</artifactId>
+       <version>RELEASE</version>
+       <scope>compile</scope>
+   </dependency>
+   ```
+
+   
