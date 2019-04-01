@@ -9,13 +9,14 @@ by netty and integrated with Springboot .
 - [x] User Transparent
 - [x] Code Non-invasion
 - [x] Asynchronous Handle Request
+- [x] MVC Route
 - [x] Fast Response
 - [x] High Available
 - [x] High Reliable
 - [x] Simple
 - [x] Gapless Integrated with Springboot
 - [x] Netty Based
-- [x] More
+- [x] More...
 
 ## Usage:
 
@@ -27,8 +28,17 @@ by netty and integrated with Springboot .
 
    [--option]:
 
-   --port: wo server port,default *8080*;
+   ​	--port: wo server port,default *8080*;
 
-   --context.path: your application class path ending with path delimiter based on your operation system,i.e. "\" for Windows,"/" for linux or unix.default *<wo-server-0.0.1-SNAPSHOT.jar's dir>/woWebApp/classes*/
+   ​	--context.path: your application class path ending with path delimiter based on your operation 		
 
-   
+   ​		system,i.e. "\" for Windows,"/" for linux or unix.
+
+   ​		default *<wo-server-0.0.1-SNAPSHOT.jar's dir>/woWebApp/classes/*
+
+2. To implement MVC route function, add the following annotations in your web interactive programs(similar with contorller in Spring MVC):
+
+   - @Request：annotate a program interacting with web browser, function as @Controller in Spring MVC does.
+   - @QueryMapping: mark down a method in @Request programs used as URI mapping working as Spring MVC @RequestMapping.
+   - @QueryParam: a @QueryMapping method's parameter, used to bind web browser input value, similar to @RequestParam in Spring MVC.
+   - @QueryVariable: annotate a URI variable in a @QueryMapping annotation, working as @RequestVariable in Spring MVC.  
