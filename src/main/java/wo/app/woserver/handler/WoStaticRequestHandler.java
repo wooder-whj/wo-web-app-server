@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.context.ApplicationContext;
+import org.springframework.util.ResourceUtils;
 import wo.app.woserver.WoServer;
 import wo.app.woserver.util.UriUtils;
 
@@ -46,7 +47,7 @@ public class WoStaticRequestHandler implements RequestHandler {
             if(arguments.containsOption(WoServer.CONTEXT_PATH)){
                 accessFile=new RandomAccessFile( arguments.getOptionValues(WoServer.CONTEXT_PATH).get(0) + contextPath, "r");
             }else {
-                accessFile=new RandomAccessFile( UriUtils.getClassPath() + contextPath.substring(1), "r");
+                accessFile=new RandomAccessFile( UriUtils.getDefaultContextPath(ResourceUtils.FILE_URL_PREFIX,WoServer.DEFAULT_CONTEXT_DIR) + contextPath.substring(1), "r");
             }
 //            String urlPath=ResourceUtils.URL_PROTOCOL_JAR.equals(UriUtils.getURLProtocol(WoStaticRequestHandler.class))
 //                            ?UriUtils.getClassPath().replace(ResourceUtils.FILE_URL_PREFIX,ResourceUtils.JAR_URL_PREFIX )

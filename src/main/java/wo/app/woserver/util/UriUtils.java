@@ -10,6 +10,8 @@ import java.net.URL;
 import java.net.URLDecoder;
 import java.util.*;
 
+import static jdk.nashorn.internal.objects.NativeArray.lastIndexOf;
+
 public class UriUtils {
     private static final Logger logger= LoggerFactory.getLogger(UriUtils.class);
     public static String decode(String uri){
@@ -118,6 +120,13 @@ public class UriUtils {
         String packageAbsolutePath = Thread.currentThread().getContextClassLoader().getResource(packagePath).getPath();
         String classPath=packageAbsolutePath.substring(0,packageAbsolutePath.indexOf(packagePath));
         return classPath;
+    }
+
+    public static String getDefaultContextPath(String fileUrlPrefix,String webDir){
+        String classPath = getClassPath();
+        classPath = classPath.substring(0, classPath.substring(0, classPath.lastIndexOf("/")).lastIndexOf("/"));
+        classPath = classPath.substring(0, classPath.substring(0, classPath.lastIndexOf("/")).lastIndexOf("/"));
+        return classPath.replace(fileUrlPrefix+(System.getProperty("os.name").contains("Windows")?"/":""), "")+webDir;
     }
 
     public static String getURLProtocol(Class<?> clazz){

@@ -30,6 +30,8 @@ public class WoServer implements ApplicationRunner{
 
     public static final String OPTION_PORT="port";
     public static final String CONTEXT_PATH ="context.path";
+    public static final String PATH_DELIMITER=System.getProperty("os.name").contains("Windows")?"\\":"/";
+    public static final String DEFAULT_CONTEXT_DIR="/woWebApp/classes/";
 
     public WoServer(WoServerProperties woServerProperties, ApplicationContext applicationContext){
         this.woServerProperties = woServerProperties;
