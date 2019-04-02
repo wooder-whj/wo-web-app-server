@@ -50,10 +50,9 @@ by netty and integrated with Springboot .
 
    ```xml
    <dependency>
-       <groupId>org.jetbrains</groupId>
-       <artifactId>annotations</artifactId>
-       <version>RELEASE</version>
-       <scope>compile</scope>
+       <groupId>wo.app.server</groupId>
+       <artifactId>annotation</artifactId>
+       <version>1.0-SNAPSHOT</version>
    </dependency>
    ```
 
