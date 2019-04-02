@@ -11,6 +11,7 @@ by netty and integrated with Springboot .
 - [x] Asynchronous Handle Request
 - [x] MVC Route
 - [x] Fast Response
+- [x] Hight Tonnage
 - [x] High Available
 - [x] High Reliable
 - [x] Simple
@@ -32,7 +33,7 @@ by netty and integrated with Springboot .
 
    ​	--context.path: your application class path ending with path delimiter based on your operation 		
 
-   ​		system,i.e. "\" for Windows,"/" for linux or unix.
+   ​		system,i.e. "\\" for Windows,"/" for linux or unix.
 
    ​		default *<wo-server-0.0.1-SNAPSHOT.jar's dir>/woWebApp/classes/*
 
