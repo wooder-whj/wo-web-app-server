@@ -43,7 +43,7 @@ by netty and integrated with Springboot .
    - @QueryParam: a @QueryMapping method's parameter, used to bind web browser input value, similar to @RequestParam in Spring MVC.
    - @QueryVariable: annotate a URI variable in a @QueryMapping annotation, working as @RequestVariable in Spring MVC.  
 
-   ## Despendencies
+   ## Dependencies
 
    Install all repositores in directory *./repository/* into your project repository, and add the following dependency in your project's pom:
 
@@ -57,3 +57,4 @@ by netty and integrated with Springboot .
    ```
 
    
+
